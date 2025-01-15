@@ -6,7 +6,7 @@ const seed = async () => {
     const employees = [];
     for (let i = 0; i < 10; i++) {
       employees.push({
-        name: faker.person.name(),
+        name: faker.person.firstName(),
       });
     }
     await prisma.employee.createMany({ data: employees });

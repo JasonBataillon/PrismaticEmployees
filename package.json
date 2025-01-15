@@ -4,7 +4,9 @@
   "description": "You've done a great job building an employee-management API with placeholder data. Now you can be trusted to set up a real database!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "node seed.js",
+    "dev": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,7 +17,9 @@
     "seed": "node prisma/seed.js"
   },
   "dependencies": {
+    "@faker-js/faker": "^9.3.0",
     "@prisma/client": "^6.2.1",
-    "faker": "^6.6.6"
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9"
   }
 }

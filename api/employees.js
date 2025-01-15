@@ -4,19 +4,19 @@ module.exports = router;
 const prisma = require('../prisma/index.js');
 
 router.get('/', async (req, res, next) => {
-  try {
-    res.json('Welcome to Prismatic Employees API');
-  } catch (e) {
-    next(e);
-  }
+  res.json('Welcome to Prismatic Employees API');
 });
 
 router.get('/employees', async (req, res, next) => {
   try {
     const employees = await prisma.employee.findMany();
-    res.json(employees);
-  } catch (e) {
-    next(e);
+    if (employees) {
+      res.status(200).json(employees);
+    } else {
+      res.status(200).json('nothing found');
+    }
+  } catch (error) {
+    res.status(400).send(error);
   }
 });
 
