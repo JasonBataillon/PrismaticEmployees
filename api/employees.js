@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 module.exports = router;
-const prisma = require('../prisma/index.js');
+const prisma = require('../prisma');
 
 router.get('/', async (req, res, next) => {
   res.json('Welcome to Prismatic Employees API');

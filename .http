@@ -1,6 +1,7 @@
-@host=http://localhost:5432
+@port=5432
+@host=http://localhost:{{port}}
 
-### GET /books
+### GET /employees
 GET {{host}}/employees
 
 ### Get existing employee

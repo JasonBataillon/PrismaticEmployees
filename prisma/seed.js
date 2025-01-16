@@ -1,5 +1,5 @@
 const { faker } = require('@faker-js/faker');
-const prisma = require('./index.js');
+const prisma = require('../prisma');
 
 const seed = async () => {
   try {
